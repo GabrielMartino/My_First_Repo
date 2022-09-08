@@ -1,0 +1,181 @@
+/*  Hi! your going to write styles here in the next couple activities. */
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+}
+@font-face {
+    font-family: caviar dreams;
+    src: url(17.2\Fonts\CaviarDreams_Bold.ttf);
+  }
+
+  @font-face {
+    font-family: century gothic;
+    src: url(17.2\Fonts\CenturyGothic.ttf);
+  }
+
+header{
+    height: 250px;
+    max-height: 500px;
+    background-image: url(../images/upsBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    font-family: caviar dreams;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+#pageTopic{
+    text-align: center;
+    margin: auto;
+     width: 50%;
+    padding: 10px;
+    font-size: '14px';
+    font-weight: 900;
+}
+
+.colorContainer{
+    display: inline-block;
+    margin: 15px;
+}
+
+.swatch{
+    height: 200px;
+    width: 170px;
+    border: 1px solid black;
+}
+
+.hexCode{
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-family: century gothic;
+}
+
+.typeContainer{
+    display: inline-block;
+    margin: 20px;
+    
+}
+
+
+.large {
+    font-size: 66px;
+    margin-bottom: 15px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.light {
+    font-weight: 100;
+}
+.regular {
+    font-weight: 500;
+}
+.bold {
+    font-weight: 700;
+}
+.typography h1 {
+    font-weight: 900;
+    font-size: 50px;
+}
+.typography h2 {
+    font-weight: 700;
+    font-size: 42px;
+}
+.typography h3 {
+    font-weight: 700;
+    font-size: 34px;
+}
+.typography h4 {
+    font-size: 26px;
+}
+
+
+.button{
+    display: inline-block;
+    padding: 15px;
+    margin: 15px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    outline: 1px solid red;
+}
+
+
+
+.darkBlue{
+    background-color: #333366;
+}
+.darkGrey{
+    background-color: #545454;
+}
+.lightGrey{
+    background-color: #E3E3E3;
+}
+.white{
+    background-color: #FFFFFF;
+}
+.lightBlue{
+    background-color: #13A0F6;
+}
+.darkRed{
+    background-color: #F84848;
+}
+.orange{
+    background-color: #FC7705;
+}
+.lightBlue{
+    background-color: #13A0F6;
+}
+.darkGreen{
+    background-color: #8ABE48;
+}
+
+
+
+
+.primary{
+    background-color: #2b459a;
+}
+.success{
+    background-color: #8ABE48;
+}
+.danger{
+    background-color: #f84848;
+}
+.warning{
+    background-color: #fc7705;
+}
+.info{
+    background-color: #0099fa;
+}
+.primaryActive{
+    background-color: #3a66b7;
+}
+.successActive{
+    background-color: #668c35;
+}
+.dangerActive{
+    background-color: #ad4848;
+}
+.warningActive{
+    background-color: #ba7a43;
+}
+.infoActive{
+    background-color: #4386ba;
+}
+.sectionHead{
+    border-bottom: 8px solid #DDDDDD;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+
+h2{
+    font-weight: 700;
+    font-size: 42px;
+}
