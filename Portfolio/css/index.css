@@ -1,0 +1,85 @@
+nav {
+  height: 128px;
+  background-color: lightgrey;
+  padding-left: 64px;
+ padding-right: 64px;
+ 
+}
+
+.rightNav{
+  float: right;
+transform: translateY(32px);
+}
+.leftNav{
+  float: left;
+transform: translateY(16px);
+}
+
+
+
+.inline-block {
+  padding: 15px;
+  display: inline-block;
+border: solid black;
+
+}
+
+.sideTitle{
+    transform-origin: right;
+    right:0%;
+    top:0%;
+    transform: rotate(-90deg) 
+    
+    
+}
+.left {
+  float: left;
+  height: 100%;
+  background-color: lightblue;
+  width: 264px;
+  
+  
+}
+
+.wrapper{
+  height: 2000px;
+
+}
+
+.right {
+
+  background-color: lightgreen;
+  height: 100%;
+  overflow: hidden;
+  text-align: Left;
+  align-content: center;
+
+  
+}
+
+.card {
+  display: inline-block;
+  background-color: #C6C6C6;
+  border-radius: 5px;
+  height: 200px;
+  width: 150px;
+  margin: 35px;
+  margin-top: 50px;
+}
+
+.h3{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  padding-top: 80px;
+}
+
+.h5{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+}
