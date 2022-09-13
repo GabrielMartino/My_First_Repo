@@ -1,0 +1,27 @@
+.flex_item {
+  padding:50px;
+  margin: 10px;
+  
+  background-color: orange;
+  color: white;
+}
+.flex {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  /* Set the property display to flex below! */
+}
+#column {
+ flex-direction: column;
+  background-color: #E6F5FF;
+  /* Set the property flex direction to column below! */
+}
+#row {
+  flex-direction: row;
+ 
+  background-color: #FFF7DE;
+  
+/* Set the property flex-direction to row below! */
+}
+ 
