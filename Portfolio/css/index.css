@@ -1,28 +1,50 @@
 nav {
-  height: 128px;
-  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  line-height: 64px;
+  padding: 16px;
   padding-left: 64px;
- padding-right: 64px;
- 
+  overflow: hidden;
+  background-color: #333;
+  text-decoration: none;
 }
 
-.rightNav{
-  float: right;
-transform: translateY(32px);
+nav a {
+  width: 64px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 32px;
+  text-decoration: none;
+  font-size: 17px;
 }
-.leftNav{
-  float: left;
-transform: translateY(16px);
+
+nav img{
+  vertical-align: middle;
+  
 }
 
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
+nav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
 
-.inline-block {
-  padding: 15px;
+.topnav-right {
   display: inline-block;
-border: solid black;
+  vertical-align: middle;
+  text-align: right;
 
+  
 }
+
+
+
+
+
 
 .sideTitle{
     transform-origin: right;
