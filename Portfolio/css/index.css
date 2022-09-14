@@ -112,6 +112,14 @@ margin-left: 64px;
   padding: 16px;
 }
 
+.cloud{
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+
+
 .scroller{
   display: flex;
   flex-direction: column;
