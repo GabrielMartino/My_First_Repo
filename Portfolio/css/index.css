@@ -69,9 +69,10 @@ margin-left: 64px;
   overflow: hidden;
   flex-direction: row;
   display: flex;
-  height: 100vh;
+  height:fit-content;
   flex-direction: row;
   margin:0;
+  
 }
 
 .left{
@@ -82,9 +83,10 @@ margin-left: 64px;
   color: white;
   background: linear-gradient(0deg, #232526 0%, #414345 100%);
   width: 256px;
+  height:100vh;
 }
 
-.left h1{
+.left h1, .left h2{
   transform: rotate(-90deg);
 }
 
@@ -95,7 +97,7 @@ margin-left: 64px;
   overflow: hidden;
   justify-content: flex-start;
   margin-top: 128px;
-  
+  height: 100vh;
 }
 
 .hero{
@@ -119,17 +121,35 @@ margin-left: 64px;
     bottom: 50px;
 }
 
+.secondarySide{
+  position: absolute;
+  top: 1756px;
+}
+
 h1{
-  height: 444px;
-    font-family: 'Caviar Dreams';
+
+  font-family: 'Caviar Dreams';
   font-style: normal;
   font-weight: 700;
   font-size: 96px;
+  line-height: 122px;
+  height: 444px;
   text-align: right;
   letter-spacing: -0.0154em;
   text-transform: uppercase;
   }
 
+h2{
+font-family: 'Caviar Dreams';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 76px;
+height: 15px;
+text-align: right;
+letter-spacing: -0.005em;
+text-transform: uppercase;
+}
 
 
 h3{
