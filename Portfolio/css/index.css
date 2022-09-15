@@ -1,15 +1,24 @@
+header{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-
-  background: #414345;
+  background: rgba(64, 66, 68, 0.75);
   backdrop-filter: blur(10px);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 10px rgba(64, 66, 68, 0.5);
   text-decoration: none;
   height: 128px;
 }
+
+
 
 nav img {
   display: flex;
@@ -48,6 +57,7 @@ margin-left: 64px;
   font-size: 17px;
   padding-top: 4px;
   border-bottom: 4px solid rgba(0, 0, 0, 0.0);
+  
 }
 
 .navRight h6:hover {
@@ -69,21 +79,22 @@ margin-left: 64px;
   overflow: hidden;
   flex-direction: row;
   display: flex;
-  height:fit-content;
   flex-direction: row;
-  margin:0;
+  
   
 }
 
 .left{
  display: flex;
  align-items: baseline;
+ padding-top: 216px;
  flex-direction: column;
  justify-content: flex-start;
   color: white;
   background: linear-gradient(0deg, #232526 0%, #414345 100%);
   width: 256px;
-  height:100vh;
+  padding-bottom: 64px;
+  
 }
 
 .left h1, .left h2{
@@ -96,8 +107,8 @@ margin-left: 64px;
   align-items: center;
   overflow: hidden;
   justify-content: flex-start;
-  margin-top: 128px;
-  height: 100vh;
+  padding-top: 256px;
+  
 }
 
 .hero{
@@ -105,33 +116,110 @@ margin-left: 64px;
   flex-direction: column;
   margin-left: min(128px);
   margin-right: min(128px);
-  margin-top: px;
+
   margin-bottom: 0;
   text-align: Left;
   width: 65%;
   padding: 16px;
 }
 
-.cloud{
+.cloudCase{
   display: flex;
   flex-direction: row;
-  height: 200px;
+  height: 150px;
+  width: 100%;
+  justify-content: space-evenly;  
+ 
 }
 
+#cloud1{
+  align-self: flex-start;
+}
 
+#cloud2{
+  align-self: center;
+}
+
+#cloud3{
+  align-self: flex-end;
+}
+
+#cloud1:hover, #cloud2:hover, #cloud3:hover {
+  position: relative;
+  animation-name: animCloud;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  animation-fill-mode: both;
+}
+
+@keyframes animBob {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:10px;}
+  100%  {left:0px; top:0px;}
+  
+}
+
+@keyframes animCloud {
+  0%   {left:0px; top:0px;}
+  25%  {left:5px; top:5px;}
+  50%  {left:0px; top:10px;}
+  75%  {right:5px; top:5px;}
+  100%  {left:0px; top:0px;}
+}
 
 .scroller{
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-    bottom: 50px;
+  margin-top: 100px;
+  animation-name: animBob;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
 }
 
 .secondarySide{
-  position: absolute;
-  top: 1756px;
+  position: relative;
+  top: 500px;
+ 
+}
+
+.caseStudyCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  padding: 0;
+  width: 100%;
+  background: #EF9A6B;
+}
+
+#caseStudy1{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  width: 65%;
+  height: 512px;
+  text-align: center;
+  
+}
+
+#caseStudy1 img{
+  justify-self: flex-start;
+  position: relative;
+  padding-top: 64px;
+  margin-bottom: 0;
+  
+ 
+
+
 }
 
 h1{
@@ -156,7 +244,7 @@ line-height: 76px;
 height: 15px;
 text-align: right;
 letter-spacing: -0.005em;
-text-transform: uppercase;
+
 }
 
 
@@ -204,6 +292,7 @@ line-height: 25px;
 text-align: center;
 letter-spacing: 0.0015em;
 color: #FFFFFF;
+
 }
 
 /*
