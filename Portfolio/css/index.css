@@ -1,3 +1,4 @@
+
 header{
   position: fixed;
   z-index: 1;
@@ -75,16 +76,32 @@ margin-left: 64px;
 
 
 .wrapper{
-  display: flex;
+ 
+  display: grid;
+  width: 100%;
+  
+  grid-template-columns: 256px 1fr;
+  grid-template-rows: 1fr 1fr 344px;
+  
+  justify-content: center;
+  
+  grid-template-areas:
+  "leftBar rightContent"
+  "leftBar rightContent"
+  "footer footer"
+  
+
+ /* display: flex;
   overflow: hidden;
   flex-direction: row;
-  display: flex;
-  flex-direction: row;
+  */
+
   
   
 }
 
 .left{
+  grid-area: leftBar;
  display: flex;
  align-items: baseline;
  padding-top: 216px;
@@ -102,13 +119,26 @@ margin-left: 64px;
 }
 
 .right {
+  grid-area: rightContent;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   justify-content: flex-start;
   padding-top: 256px;
-  
+}
+
+.footer{
+  grid-area: footer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  background-color: #232526;
+  padding: 32px;
+
 }
 
 .hero{
@@ -175,7 +205,8 @@ margin-left: 64px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  
+  margin-bottom: 100px;
   animation-name: animBob;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -185,41 +216,110 @@ margin-left: 64px;
 
 .secondarySide{
   position: relative;
-  top: 500px;
- 
+  top: 452px;
 }
 
 .caseStudyCards{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 64px;
-  margin-bottom: 64px;
-  padding: 0;
+  display: grid;
   width: 100%;
-  background: #EF9A6B;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows: 512px;
+  grid-gap: 64px;
+  justify-content: center;
+  
+  grid-template-areas:
+  "caseStudy1"
+  "caseStudy1"
+  "caseStudy1"
+  
+  
+  ;
+ 
 }
+
 
 #caseStudy1{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 0;
-  width: 65%;
-  height: 512px;
-  text-align: center;
-  
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 512px;
+  justify-content: center;
+  background: #EF9A6B;
+  grid-template-areas:
+  "caseStudyImg caseStudyTitle";
 }
 
-#caseStudy1 img{
-  justify-self: flex-start;
-  position: relative;
-  padding-top: 64px;
-  margin-bottom: 0;
+#caseStudy2{
+  display: grid;
+  width: 100%;
   
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 512px;
+  justify-content: center;
+  background: #E37962;
+  grid-template-areas:
+  "caseStudyImg caseStudyTitle";
+}
+
+
+#caseStudy3{
+  display: grid;
+  width: 100%;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 512px;
+  justify-content: center;
+  background: #B6FFED;
+  grid-template-areas:
+  "caseStudyImg caseStudyTitle";
+}
+
+#caseStudy4{
+  display: grid;
+  width: 100%;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 512px;
+  justify-content: center;
+  background: #FFD98E;
+  grid-template-areas:
+  "caseStudyImg caseStudyTitle";
+}
+
+
+.caseStudyImg{
+  grid-area: caseStudyImg;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 128px;
  
+}
+
+.caseStudyImgLEFT{
+  grid-area: caseStudyImg;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  padding-top: 128px;
+ 
+}
 
 
+.caseStudyTitle{
+  grid-area: caseStudyTitle;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-right: 32px;  
+}
+
+.gridItem{
+  padding-left: 32px;
+  padding-right: 32px;
+ 
 }
 
 h1{
@@ -242,8 +342,9 @@ font-weight: 700;
 font-size: 60px;
 line-height: 76px;
 height: 15px;
-text-align: right;
+text-align: left;
 letter-spacing: -0.005em;
+margin-top: 0;
 
 }
 
@@ -292,6 +393,7 @@ line-height: 25px;
 text-align: center;
 letter-spacing: 0.0015em;
 color: #FFFFFF;
+margin: 0;
 
 }
 
