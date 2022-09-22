@@ -1,0 +1,108 @@
+
+.progressbar {
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 61px;
+  padding: 3px;
+}
+.progressbar > #orangeBar1 {
+  background-color: red;
+  width: 20%;
+  height: 20px;
+  border-radius: 5px;
+  /* add the animation name here for the progress bar */
+}
+
+.progressbar > #orangeBar2 {
+  background-color: red;
+  width: 40%;
+  height: 20px;
+  border-radius: 5px;
+  /* add the animation name here for the progress bar */
+}
+
+.progressbar > #orangeBar3 {
+  background-color: red;
+  width: 60%;
+  height: 20px;
+  border-radius: 5px;
+  /* add the animation name here for the progress bar */
+}
+
+.progressbar > #orangeBar4 {
+  background-color: red;
+  width: 80%;
+  height: 20px;
+  border-radius: 5px;
+  /* add the animation name here for the progress bar */
+}
+
+.progressbar > #orangeBar5 {
+  background-color: red;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  /* add the animation name here for the progress bar */
+}
+
+
+
+.movingBox {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* Add the animation name here to mox the box */
+
+}
+
+
+@keyframes loadBar {
+  from {
+
+  }
+  to {
+
+  }
+}
+
+
+
+/* these values are used to display the grid and items*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5fr;
+  grid-template-areas:
+  "loadingBar1"
+  "loadingBar2"
+  "loadingBar3"
+  "loadingBar4"
+  "loadingBar5"
+  ;
+}
+
+.grid:hover{
+background-color: blue;
+}
+
+#1 {
+  grid-area: loadingBar1;
+}
+
+#2 {
+  grid-area: loadingBar2;
+}
+
+#3 {
+  grid-area: loadingBar3;
+}
+
+#4 {
+  grid-area: loadingBar4;
+}
+
+#5 {
+  grid-area: loadingBar5;
+}
+
+

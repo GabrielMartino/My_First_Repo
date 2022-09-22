@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "rotate"
+  "scale"
+  "translate"
+  ;
+}
+.rotate {
+  grid-area: rotate;
+  text-align: center;
+}
+.rotate img {
+/* Write your rotate transform here */
+
+}
+
+.rotate img:hover{
+  transform: rotate(180deg);
+  animation-duration: 3s;
+  transition: linear;
+  position: relative;
+}
+
+.scale {
+  grid-area: scale;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+}
+.scaleMe {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin: 0 auto;
+  
+  /* Write the scale transform here */
+
+}
+
+.scaleMe:hover{
+  transform: scale(2);
+  animation-duration: 3;
+}
+
+
+.translate {
+  grid-area: translate;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+}
+.moveMe {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  /* Write the translate transform here */
+  
+}
+
+.moveMe:hover{
+  
+  animation-name: animMove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+@keyframes animMove{
+  0%   {transform: translate(0%, 0%);}
+  20%  {transform: translate(80%, 40%);}
+  40%  {transform: translate(80%, -40%);}
+  60%  {transform: translate(-80%, 40%);}
+  80%  {transform: translate(-80%, -40%);}
+  100%  {transform: translate(0%, 0%);}
+}
+
+.gridChild {
+  background-color: lightgrey;
+  border: 1px solid lightblue;
+  margin: 15px 0px;
+}
