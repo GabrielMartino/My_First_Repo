@@ -1,0 +1,391 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
+header{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 00px 3px 3px 2px  rgba(64, 66, 68, .25);
+  text-decoration: none;
+  height: 128px;
+  width: 100%;
+}
+
+button{
+  width: 165px;
+  height: 32px;
+  background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+  border: none;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+font-family: 'Century Gothic';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+letter-spacing: 0.0125em;
+cursor: pointer;
+
+}
+
+nav img {
+display: flex;
+margin-left: 64px;
+margin-right: 24px;
+}
+
+.underline {
+  position: relative
+ }
+ 
+.underline::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(0.25turn, #C84E89, #F15F79);
+}
+
+.navRight{
+  display: flex;
+  margin-right: 64px;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.navLeft{
+  display: flex;
+  align-items: center;
+}
+
+
+/*
+.navRight h6 {
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 4px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.0);
+  
+}
+
+.navRight h6:hover {
+
+  border-image: linear-gradient(0.25turn, #C84E89, #F15F79);
+  border-image-slice: 1;
+  cursor: pointer;
+  
+}
+
+.navRight h6.active {
+  border-image: linear-gradient(0.25turn, #C84E89, #F15F79);
+  border-image-slice: 1;
+  
+}
+*/
+
+.wrapper{
+ 
+  display: grid;
+
+
+
+grid-row-gap: 64px;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr;
+  grid-template-areas:
+  "hero hero"
+  "card1 card2"
+  "card3 card4"
+  "footer footer"
+  
+
+
+}
+
+
+
+footer{
+  grid-area: footer;
+  height: 100%;
+  
+  margin: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  background-color: #232526;
+  padding: 32px;
+}
+
+.footerImage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+
+  opacity: .05;
+
+ overflow:hidden;
+ height: 350px;
+
+ 
+}
+
+
+.hero{
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  margin-left: min(128px);
+  margin-right: min(128px);
+
+  margin-bottom: 0;
+  text-align: Left;
+  width: 65%;
+  padding: 16px;
+}
+
+.cloudCase{
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  width: 100%;
+  justify-content: space-evenly;  
+ 
+}
+
+#cloud1{
+  align-self: flex-start;
+}
+
+#cloud2{
+  align-self: center;
+}
+
+#cloud3{
+  align-self: flex-end;
+}
+
+#cloud1:hover, #cloud2:hover, #cloud3:hover {
+  position: relative;
+  animation-name: animCloud;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  animation-fill-mode: both;
+}
+
+@keyframes animBob {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:10px;}
+  100%  {left:0px; top:0px;}
+  
+}
+
+@keyframes animCloud {
+  0%   {left:0px; top:0px;}
+  25%  {left:5px; top:5px;}
+  50%  {left:0px; top:10px;}
+  75%  {right:5px; top:5px;}
+  100%  {left:0px; top:0px;}
+}
+
+
+
+
+
+#readMore1{
+  grid-area: readMoreButton;
+display: flex;
+flex-direction: column;
+margin-top: 32px;
+
+}
+
+
+#caseStudy1{
+  grid-area: card1;
+margin-left: 64px;
+max-width: 512px;
+height: fit-content;
+  display: flex;
+  margin-right: 32px;
+flex-direction: column;
+  justify-content: center;
+  ;
+}
+
+#caseStudy2{
+  grid-area: card2;
+  margin-right: 64px;
+  margin-left: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  background: #E37962;
+  grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+  ;
+}
+
+
+#caseStudy3{
+  grid-area: card3;
+  margin-left: 64px;
+  margin-right: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  background: #B6FFED;
+  grid-template-areas:
+  "caseStudyImg caseStudyTitle";
+}
+
+#caseStudy4{
+  grid-area: card4;
+  margin-right: 64px;
+
+  display: grid;
+ 
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  background: #FFD98E;
+  grid-template-areas:
+  "caseStudyImg caseStudyTitle";
+}
+
+
+.caseStudyImg{
+  grid-area: caseStudyImg;
+}
+
+.caseStudyImg img{
+  width: 100%;
+  height: auto;
+  
+}
+
+.caseStudyImgLEFT{
+  grid-area: caseStudyImg;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  padding-top: 128px;
+ 
+}
+
+
+.caseStudyTitle{
+  grid-area: caseStudyTitle;
+ text-align: left;
+ height: fit-content;
+}
+
+
+
+h1{
+
+  font-family: 'Caviar Dreams';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 122px;
+  height: 444px;
+  text-align: right;
+  letter-spacing: -0.0154em;
+  text-transform: uppercase;
+  }
+
+h2{
+font-family: 'Caviar Dreams';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 76px;
+height: 15px;
+text-align: left;
+letter-spacing: -0.005em;
+margin-top: 0;
+
+}
+
+
+h3{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+margin: 0;
+
+color: #151515;
+}
+
+h4{
+  font-family: 'Century Gothic';
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 42px;
+text-align: center;
+letter-spacing: 0.0025em;
+margin: 0px;
+
+
+}
+
+h5{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+margin: 0px;
+color: #151515;
+}
+
+h6{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 25px;
+text-align: left;
+letter-spacing: 0.0015em;
+color: #2e2e2e;
+margin: 0;
+
+}
+
+
