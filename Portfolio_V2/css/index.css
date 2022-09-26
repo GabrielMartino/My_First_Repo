@@ -19,13 +19,14 @@ nav {
   backdrop-filter: blur(10px);
   box-shadow: 00px 3px 3px 2px  rgba(64, 66, 68, .25);
   text-decoration: none;
+  background-color: rgb(255, 255, 255, .7);
   height: 128px;
   width: 100%;
 }
 
 button{
   width: 165px;
-  height: 32px;
+  height: 42px;
   background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
   border: none;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -42,8 +43,67 @@ justify-content: center;
 text-align: center;
 letter-spacing: 0.0125em;
 cursor: pointer;
+position: relative;
+transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
+
+/*start*/
+
+
+
+
+button:before, button:after {
+ 
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+/* On Hover the 'before' sudo element's is added an opacity of 0 and the */
+/* element is scaled to 2 times. */
+button:hover:before {
+  animation: anim 500ms ease forwards ;
+  border: 5px solid #C84E89;
+}
+
+.buttonClicked:after {
+  animation: anim 500ms ease forwards ;
+  border: 5px solid #C84E89;
+}
+
+
+
+@keyframes anim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    border: 5px solid #C84E89;
+  }
+  50% {
+    border-color: #C84E89;
+  }
+  100% {
+    transform: scale( 1.2, 2);
+    opacity: 0;
+    border: 0px solid #C84E89;
+  }
+}
+
+
+ 
+
+/*end*/
+
+
+
+
+
+
 
 nav img {
 display: flex;
@@ -67,7 +127,7 @@ margin-right: 24px;
 
 .navRight{
   display: flex;
-  margin-right: 64px;
+  padding-right: 64px;
   justify-content: space-between;
   align-content: center;
 }
@@ -76,6 +136,10 @@ margin-right: 24px;
   display: flex;
   align-items: center;
 }
+
+
+
+
 
 
 /*
@@ -105,23 +169,19 @@ margin-right: 24px;
 */
 
 .wrapper{
- 
   display: grid;
-
-
-
-grid-row-gap: 64px;
-
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4fr;
+margin:auto;
+  grid-row-gap: 64px;
+  grid-column-gap: 64px;
+  grid-template-columns: 64px 1fr 1fr 64px;
+  grid-template-rows: 3fr;
+min-width: 1316px;
+  max-width: 1920px;
   grid-template-areas:
-  "hero hero"
-  "card1 card2"
-  "card3 card4"
-  "footer footer"
-  
-
-
+  ". hero hero ."
+  ". card1 card2 ."
+  ". card3 card4 ."
+;
 }
 
 
@@ -129,8 +189,8 @@ grid-row-gap: 64px;
 footer{
   grid-area: footer;
   height: 100%;
-  
-  margin: 0;
+  width: 100%;
+  margin-top: 128px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -145,27 +205,42 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
- 
-
   opacity: .05;
-
  overflow:hidden;
- height: 350px;
-
  
+ position: absolute;
+ width: 100%;
+ overflow:hidden;
 }
 
+.footerImage img{
+
+height: 512px;
+overflow:visible;
+
+}
+
+.link{
+  display: flex;
+  flex-direction: row;
+align-items: center;
+justify-content: left;
+
+}
+
+.link img{
+  padding: 32px;
+}
 
 .hero{
   grid-area: hero;
   display: flex;
   flex-direction: column;
-  margin-left: min(128px);
-  margin-right: min(128px);
 
+  margin-top: 128px;
   margin-bottom: 0;
   text-align: Left;
-  width: 65%;
+  width: 100%;
   padding: 16px;
 }
 
@@ -221,89 +296,80 @@ footer{
 
 #readMore1{
   grid-area: readMoreButton;
-display: flex;
-flex-direction: column;
-margin-top: 32px;
+
+padding-top: 32px;
+align-self: flex-end;
+justify-self: baseline;
+
 
 }
+
 
 
 #caseStudy1{
   grid-area: card1;
-margin-left: 64px;
-max-width: 512px;
-height: fit-content;
-  display: flex;
-  margin-right: 32px;
-flex-direction: column;
-  justify-content: center;
-  ;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
+
 }
 
 #caseStudy2{
   grid-area: card2;
-  margin-right: 64px;
-  margin-left: 32px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-content: center;
-  background: #E37962;
-  grid-template-areas:
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
   "caseStudyImg"
   "caseStudyTitle"
   "readMoreButton"
-  ;
+;
 }
 
 
 #caseStudy3{
   grid-area: card3;
-  margin-left: 64px;
-  margin-right: 64px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: center;
-  background: #B6FFED;
-  grid-template-areas:
-  "caseStudyImg caseStudyTitle";
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
 }
 
 #caseStudy4{
   grid-area: card4;
-  margin-right: 64px;
-
   display: grid;
- 
-  
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: center;
-  background: #FFD98E;
-  grid-template-areas:
-  "caseStudyImg caseStudyTitle";
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
 }
 
 
 .caseStudyImg{
   grid-area: caseStudyImg;
+ 
 }
 
 .caseStudyImg img{
   width: 100%;
-  height: auto;
+  
+  
   
 }
 
-.caseStudyImgLEFT{
-  grid-area: caseStudyImg;
-  display: flex;
-  justify-content: left;
-  align-content: center;
-  padding-top: 128px;
- 
-}
+
 
 
 .caseStudyTitle{
@@ -349,7 +415,7 @@ font-size: 48px;
 line-height: 60px;
 margin: 0;
 
-color: #151515;
+
 }
 
 h4{
@@ -372,7 +438,7 @@ font-weight: 400;
 font-size: 24px;
 line-height: 30px;
 margin: 0px;
-color: #151515;
+
 }
 
 h6{
@@ -383,9 +449,30 @@ font-size: 20px;
 line-height: 25px;
 text-align: left;
 letter-spacing: 0.0015em;
-color: #2e2e2e;
+
 margin: 0;
 
 }
 
 
+@media only screen and (max-width: 1000px) {
+ 
+  .wrapper{
+    display: grid;
+  margin:auto;
+    grid-row-gap: 64px;
+    grid-column-gap: 64px;
+    grid-template-columns: 16px 1fr 16px;
+    grid-template-rows: 5fr;
+  min-width: 1316px;
+    max-width: 1920px;
+    grid-template-areas:
+    ". hero ."
+    ". card1 ."
+    ". card2 ."
+    ". card3 ."
+    ". card4 ."
+  ;
+  }
+
+}
